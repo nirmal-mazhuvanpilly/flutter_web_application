@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_application/Helpers/responsive_ui.dart';
-import 'package:flutter_web_application/views/dashboard/dashboard_largescreen_view.dart';
-import 'package:flutter_web_application/views/dashboard/dashboard_mediumscreen_view.dart';
-import 'package:flutter_web_application/views/dashboard/dashboard_smallscreen_view.dart';
+import 'package:flutter_web_application/Helpers/custom_scroll_behaviour.dart';
 import 'package:flutter_web_application/views/dashboard/dashboard_view.dart';
 
 void main() {
@@ -16,6 +13,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Web Application',
+        scrollBehavior:
+            MyCustomScrollBehavior(), //Custom Scrollbehaviour for web
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

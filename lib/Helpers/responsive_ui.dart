@@ -20,19 +20,19 @@ class ResponsiveView extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         if (constraints.maxWidth >= ResponsiveConstants.largeScreenSize) {
-          debugPrint("Large Screen");
+          // debugPrint("Large Screen");
           return largeScreen;
         } else if (constraints.maxWidth < ResponsiveConstants.largeScreenSize &&
             constraints.maxWidth >= ResponsiveConstants.mediumScreenSize &&
             constraints.maxWidth <= ResponsiveConstants.customScreenSize) {
-          debugPrint("Custom Screen");
+          // debugPrint("Custom Screen");
           return customScreen ?? largeScreen;
         } else if (constraints.maxWidth < ResponsiveConstants.largeScreenSize &&
             constraints.maxWidth >= ResponsiveConstants.mediumScreenSize) {
-          debugPrint("Medium Screen");
+          // debugPrint("Medium Screen");
           return mediumScreen ?? largeScreen;
         } else {
-          debugPrint("Small Screen");
+          // debugPrint("Small Screen");
           return smallScreen ?? largeScreen;
         }
       },
