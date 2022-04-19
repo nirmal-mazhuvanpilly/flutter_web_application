@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_application/Utils/border_constants.dart';
 import 'package:flutter_web_application/Utils/color_constants.dart';
+import 'package:flutter_web_application/Utils/padding_constants.dart';
 import 'package:flutter_web_application/Utils/textstyle_constants.dart';
 import 'package:flutter_web_application/Utils/widget_constants.dart';
 
@@ -11,9 +13,9 @@ class AirQualityIndexCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: PaddingConsts.commonPadding20,
       decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(10)),
+          color: Colors.white, borderRadius: BorderConsts.circularBorder10),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -120,18 +122,18 @@ class GasCard extends StatelessWidget {
                 duration: const Duration(milliseconds: 200),
                 scale: value ? 0.80 : 1.0,
                 child: Container(
-                  padding: const EdgeInsets.all(10),
+                  padding: PaddingConsts.commonPadding10,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
+                      borderRadius: BorderConsts.circularBorder5,
                       gradient: LinearGradient(
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                           stops: const [0.1, 1, 1],
                           colors: value
                               ? const [
-                                  Color.fromARGB(255, 5, 151, 120),
-                                  Color.fromARGB(255, 13, 202, 161),
-                                  Color.fromARGB(255, 5, 151, 120),
+                                  ColorConsts.darkGreenColor,
+                                  ColorConsts.greenColor,
+                                  ColorConsts.darkGreenColor,
                                 ]
                               : const [
                                   Color.fromARGB(255, 240, 240, 240),

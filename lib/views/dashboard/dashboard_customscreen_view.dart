@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_application/Utils/color_constants.dart';
+import 'package:flutter_web_application/Utils/padding_constants.dart';
 import 'package:flutter_web_application/Utils/widget_constants.dart';
 import 'package:flutter_web_application/Widgets/air_quality_index_card.dart';
 import 'package:flutter_web_application/Widgets/main_weather_box.dart';
@@ -19,11 +21,11 @@ class DashboardCustomScreenView extends StatelessWidget {
           controller: ScrollController(),
           children: [
             const Padding(
-              padding: EdgeInsets.all(15.0),
+              padding: PaddingConsts.commonPadding15,
               child: TopWeatherCard(),
             ),
             Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: PaddingConsts.commonPadding15,
               child: SizedBox(
                 height: 250,
                 child: Row(
@@ -36,8 +38,8 @@ class DashboardCustomScreenView extends StatelessWidget {
                       children: const [
                         Expanded(
                           child: SubWeatherBox(
-                            firstColor: Color.fromARGB(255, 243, 114, 232),
-                            secondColor: Color.fromARGB(255, 235, 79, 222),
+                            firstColor: ColorConsts.pinkColor,
+                            secondColor: ColorConsts.darkPinkColor,
                             text1: "Wind",
                             text2: "Hum",
                             kmPerHour: "15",
@@ -49,8 +51,8 @@ class DashboardCustomScreenView extends StatelessWidget {
                         WidgetConstants.height10,
                         Expanded(
                           child: SubWeatherBox(
-                            firstColor: Color.fromARGB(255, 245, 87, 87),
-                            secondColor: Color.fromARGB(255, 212, 57, 57),
+                            firstColor: ColorConsts.orangeColor,
+                            secondColor: ColorConsts.darkOrangeColor,
                             text1: "Wind",
                             text2: "Hum",
                             kmPerHour: "17",
@@ -66,11 +68,11 @@ class DashboardCustomScreenView extends StatelessWidget {
               ),
             ),
             const Padding(
-              padding: EdgeInsets.all(15.0),
+              padding: PaddingConsts.commonPadding15,
               child: WeekDaysBox(),
             ),
             Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: PaddingConsts.commonPadding15,
               child: Row(
                 children: const [
                   Expanded(
@@ -84,7 +86,7 @@ class DashboardCustomScreenView extends StatelessWidget {
               ),
             ),
             Container(
-                padding: const EdgeInsets.all(15),
+                padding: PaddingConsts.commonPadding15,
                 height: 400,
                 child: const SunRiseNSetCard())
           ],

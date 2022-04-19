@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_application/Utils/color_constants.dart';
+import 'package:flutter_web_application/Utils/padding_constants.dart';
 import 'package:flutter_web_application/Widgets/air_quality_index_card.dart';
 import 'package:flutter_web_application/Widgets/main_weather_box.dart';
 import 'package:flutter_web_application/Widgets/monthly_rain_fall_card.dart';
@@ -18,18 +20,18 @@ class DashboardSmallScreenView extends StatelessWidget {
           controller: ScrollController(),
           children: [
             const Padding(
-              padding: EdgeInsets.all(15.0),
+              padding: PaddingConsts.commonPadding15,
               child: TopWeatherCard(),
             ),
             const Padding(
-              padding: EdgeInsets.all(15.0),
+              padding: PaddingConsts.commonPadding15,
               child: MainWeatherBox(),
             ),
             const Padding(
-              padding: EdgeInsets.all(15.0),
+              padding: PaddingConsts.commonPadding15,
               child: SubWeatherBox(
-                firstColor: Color.fromARGB(255, 243, 114, 232),
-                secondColor: Color.fromARGB(255, 235, 79, 222),
+                firstColor: ColorConsts.pinkColor,
+                secondColor: ColorConsts.darkPinkColor,
                 text1: "Wind",
                 text2: "Hum",
                 kmPerHour: "15",
@@ -39,10 +41,10 @@ class DashboardSmallScreenView extends StatelessWidget {
               ),
             ),
             const Padding(
-              padding: EdgeInsets.all(15.0),
+              padding: PaddingConsts.commonPadding15,
               child: SubWeatherBox(
-                firstColor: Color.fromARGB(255, 245, 87, 87),
-                secondColor: Color.fromARGB(255, 212, 57, 57),
+                firstColor: ColorConsts.orangeColor,
+                secondColor: ColorConsts.darkOrangeColor,
                 text1: "Wind",
                 text2: "Hum",
                 kmPerHour: "17",
@@ -52,19 +54,19 @@ class DashboardSmallScreenView extends StatelessWidget {
               ),
             ),
             const Padding(
-              padding: EdgeInsets.all(15.0),
+              padding: PaddingConsts.commonPadding15,
               child: WeekDaysBox(),
             ),
             Container(
                 height: 210,
-                padding: const EdgeInsets.all(15),
+                padding: PaddingConsts.commonPadding15,
                 child: const AirQualityIndexCard()),
             Container(
                 height: 210,
-                padding: const EdgeInsets.all(15),
+                padding: PaddingConsts.commonPadding15,
                 child: const MonthyRainFallCard()),
             Container(
-                padding: const EdgeInsets.all(15),
+                padding: PaddingConsts.commonPadding15,
                 height: 400,
                 child: const SunRiseNSetCard())
           ],

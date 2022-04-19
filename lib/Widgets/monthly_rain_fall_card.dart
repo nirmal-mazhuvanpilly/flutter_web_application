@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_application/Utils/border_constants.dart';
+import 'package:flutter_web_application/Utils/padding_constants.dart';
 import 'package:flutter_web_application/Utils/textstyle_constants.dart';
 import 'package:flutter_web_application/Utils/widget_constants.dart';
 import 'package:flutter_web_application/Widgets/animated_box_scale.dart';
@@ -11,9 +13,9 @@ class MonthyRainFallCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: PaddingConsts.commonPadding20,
       decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(10)),
+          color: Colors.white, borderRadius: BorderConsts.circularBorder10),
       child: Column(
         children: [
           Row(
@@ -60,9 +62,9 @@ class MonthyRainFallCard extends StatelessWidget {
           ),
           Expanded(
               child: AnimatedBoxSclae(
-                child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: const [
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: const [
                 RainFallChartLevel(empty: 2, sun: 6, rain: 2),
                 RainFallChartLevel(empty: 0, sun: 7, rain: 3),
                 RainFallChartLevel(empty: 5, sun: 3, rain: 2),
@@ -73,9 +75,9 @@ class MonthyRainFallCard extends StatelessWidget {
                 RainFallChartLevel(empty: 5, sun: 2, rain: 3),
                 RainFallChartLevel(empty: 1, sun: 1, rain: 8),
                 RainFallChartLevel(empty: 3, sun: 6, rain: 1),
-                            ],
-                          ),
-              ))
+              ],
+            ),
+          ))
         ],
       ),
     );
@@ -92,14 +94,14 @@ class RainFallChartLevel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10),
+      padding: PaddingConsts.verticalPadding10,
       child: Stack(
         children: [
           Container(
             width: 8,
             decoration: BoxDecoration(
                 color: Colors.grey.shade200,
-                borderRadius: BorderRadius.circular(10)),
+                borderRadius: BorderConsts.circularBorder10),
           ),
           Column(
             children: [
@@ -116,7 +118,7 @@ class RainFallChartLevel extends StatelessWidget {
                             Color.fromARGB(250, 0, 162, 255),
                             Color.fromARGB(248, 61, 139, 255)
                           ]),
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderConsts.circularBorder10),
                 ),
               ),
               WidgetConstants.height5,
@@ -132,7 +134,7 @@ class RainFallChartLevel extends StatelessWidget {
                             Color.fromARGB(251, 255, 153, 0),
                             Color.fromARGB(248, 255, 177, 61)
                           ]),
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderConsts.circularBorder10),
                 ),
               ),
             ],

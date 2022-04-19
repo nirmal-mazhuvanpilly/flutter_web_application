@@ -2,25 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web_application/Utils/color_constants.dart';
 
 class TextStyleConsts {
-  static const TextStyle whiteText = TextStyle(color: ColorConsts.whiteColor);
+  static const TextStyle whiteText = TextStyle(color: Colors.white);
 
   static const TextStyle whiteBoldText =
-      TextStyle(color: ColorConsts.whiteColor, fontWeight: FontWeight.bold);
+      TextStyle(color: Colors.white, fontWeight: FontWeight.bold);
 
   static const TextStyle whiteText20 =
-      TextStyle(color: ColorConsts.whiteColor, fontSize: 20);
+      TextStyle(color: Colors.white, fontSize: 20);
 
-  static const TextStyle whiteBoldText20 = TextStyle(
-      color: ColorConsts.whiteColor, fontSize: 20, fontWeight: FontWeight.bold);
+  static const TextStyle whiteBoldText20 =
+      TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold);
 
   static const TextStyle whiteText30 =
-      TextStyle(color: ColorConsts.whiteColor, fontSize: 30);
+      TextStyle(color: Colors.white, fontSize: 30);
 
   static const TextStyle whiteText60 =
-      TextStyle(color: ColorConsts.whiteColor, fontSize: 60);
+      TextStyle(color: Colors.white, fontSize: 60);
 
   static const TextStyle blackBoldText =
-      TextStyle(color: ColorConsts.blackColor, fontWeight: FontWeight.bold);
+      TextStyle(color: Colors.black, fontWeight: FontWeight.bold);
+
+  static const TextStyle greyText = TextStyle(color: Colors.grey);
 
   static const TextStyle greyBoldText =
       TextStyle(color: ColorConsts.greyColor, fontWeight: FontWeight.bold);

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_application/Utils/color_constants.dart';
+import 'package:flutter_web_application/Utils/padding_constants.dart';
 import 'package:flutter_web_application/Utils/widget_constants.dart';
 import 'package:flutter_web_application/Widgets/air_quality_index_card.dart';
 import 'package:flutter_web_application/Widgets/main_weather_box.dart';
@@ -21,7 +23,7 @@ class DashboardLargeMediumScreenViewBody extends StatelessWidget {
           flex: 3,
           child: Container(
             color: Colors.grey.shade200,
-            padding: const EdgeInsets.all(25),
+            padding: PaddingConsts.commonPadding25,
             child: ListView(
               controller: ScrollController(),
               children: [
@@ -59,16 +61,16 @@ class DashboardLargeMediumScreenViewBody extends StatelessWidget {
               SizedBox(
                   height: 400,
                   child: Padding(
-                    padding: EdgeInsets.only(left: 25, right: 25, top: 25),
+                    padding: PaddingConsts.leftRightTop25,
                     child: MainWeatherBox(),
                   )),
               SizedBox(
                   height: 150,
                   child: Padding(
-                    padding: EdgeInsets.only(left: 25, right: 25, top: 10),
+                    padding: PaddingConsts.leftRight25Top10,
                     child: SubWeatherBox(
-                      firstColor: Color.fromARGB(255, 243, 114, 232),
-                      secondColor: Color.fromARGB(255, 235, 79, 222),
+                      firstColor: ColorConsts.pinkColor,
+                      secondColor: ColorConsts.darkPinkColor,
                       text1: "Wind",
                       text2: "Hum",
                       kmPerHour: "15",
@@ -80,10 +82,10 @@ class DashboardLargeMediumScreenViewBody extends StatelessWidget {
               SizedBox(
                   height: 150,
                   child: Padding(
-                    padding: EdgeInsets.only(left: 25, right: 25, top: 10),
+                    padding: PaddingConsts.leftRight25Top10,
                     child: SubWeatherBox(
-                      firstColor: Color.fromARGB(255, 245, 87, 87),
-                      secondColor: Color.fromARGB(255, 212, 57, 57),
+                      firstColor: ColorConsts.orangeColor,
+                      secondColor: ColorConsts.darkOrangeColor,
                       text1: "Wind",
                       text2: "Hum",
                       kmPerHour: "17",
@@ -99,5 +101,3 @@ class DashboardLargeMediumScreenViewBody extends StatelessWidget {
     );
   }
 }
-
-

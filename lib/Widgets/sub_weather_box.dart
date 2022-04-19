@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_application/Utils/border_constants.dart';
+import 'package:flutter_web_application/Utils/padding_constants.dart';
 import 'package:flutter_web_application/Utils/textstyle_constants.dart';
 import 'package:flutter_web_application/Utils/widget_constants.dart';
 import 'package:flutter_web_application/Widgets/animated_box_scale.dart';
@@ -29,9 +31,9 @@ class SubWeatherBox extends StatelessWidget {
     return AnimatedBoxSclae(
       child: Container(
         width: double.infinity,
-        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
+        padding: PaddingConsts.vertical20horizontal25,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5),
+            borderRadius: BorderConsts.circularBorder5,
             gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -50,7 +52,7 @@ class SubWeatherBox extends StatelessWidget {
                       style: TextStyleConsts.whiteText,
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 40),
+                      padding: PaddingConsts.left40,
                       child: Row(
                         children: [
                           const Text(
@@ -74,7 +76,7 @@ class SubWeatherBox extends StatelessWidget {
                       style: TextStyleConsts.whiteText,
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 40),
+                      padding: PaddingConsts.left40,
                       child: Row(
                         children: [
                           const Text(

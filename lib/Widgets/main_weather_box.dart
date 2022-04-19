@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_application/Utils/border_constants.dart';
+import 'package:flutter_web_application/Utils/padding_constants.dart';
 import 'package:flutter_web_application/Utils/textstyle_constants.dart';
 import 'package:flutter_web_application/Utils/widget_constants.dart';
 import 'package:flutter_web_application/Widgets/animated_box_scale.dart';
@@ -12,10 +14,10 @@ class MainWeatherBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedBoxSclae(
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 20),
+        padding: PaddingConsts.verticalPadding20,
         width: double.infinity,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5),
+            borderRadius: BorderConsts.circularBorder5,
             gradient: const LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,

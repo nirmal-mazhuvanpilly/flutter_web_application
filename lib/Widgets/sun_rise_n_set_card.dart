@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_application/Utils/border_constants.dart';
+import 'package:flutter_web_application/Utils/padding_constants.dart';
 import 'package:flutter_web_application/Utils/textstyle_constants.dart';
 import 'package:flutter_web_application/Utils/widget_constants.dart';
 import 'package:flutter_web_application/Widgets/animated_box_scale.dart';
@@ -11,9 +13,9 @@ class SunRiseNSetCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: PaddingConsts.commonPadding20,
       decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(10)),
+          color: Colors.white, borderRadius: BorderConsts.circularBorder10),
       child: Column(
         children: [
           Row(
@@ -54,10 +56,10 @@ class SubCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: PaddingConsts.commonPadding20,
       decoration: BoxDecoration(
           color: const Color.fromRGBO(255, 248, 240, 1),
-          borderRadius: BorderRadius.circular(10)),
+          borderRadius: BorderConsts.circularBorder10),
       child: Column(
         children: [
           Row(
@@ -91,7 +93,7 @@ class SubCard extends StatelessWidget {
                     children: [
                       const Text(
                         "Sunrise",
-                        style: TextStyle(color: Colors.grey),
+                        style: TextStyleConsts.greyText,
                       ),
                       Text(sunRise ?? "",
                           style: TextStyleConsts.dartBlueBoldText20)
@@ -112,7 +114,7 @@ class SubCard extends StatelessWidget {
                     children: [
                       const Text(
                         "Sunset",
-                        style: TextStyle(color: Colors.grey),
+                        style: TextStyleConsts.greyText,
                       ),
                       Text(sunSet ?? "",
                           style: TextStyleConsts.dartBlueBoldText20)

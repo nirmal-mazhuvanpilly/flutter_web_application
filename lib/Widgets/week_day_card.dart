@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_application/Utils/border_constants.dart';
+import 'package:flutter_web_application/Utils/padding_constants.dart';
 import 'package:flutter_web_application/Utils/textstyle_constants.dart';
 
 class WeekDayCard extends StatelessWidget {
@@ -25,9 +27,9 @@ class WeekDayCard extends StatelessWidget {
               duration: const Duration(milliseconds: 200),
               scale: value ? 0.95 : 1.0,
               child: Container(
-                margin: const EdgeInsets.symmetric(vertical: 10),
+                margin: PaddingConsts.verticalPadding10,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderConsts.circularBorder10,
                     color: value ? Colors.black : Colors.white,
                     gradient: LinearGradient(
                         begin: Alignment.topLeft,
